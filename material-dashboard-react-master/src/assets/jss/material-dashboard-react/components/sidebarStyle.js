@@ -215,6 +215,28 @@ const sidebarStyle = theme => ({
         ",.2)"
     }
   },
+  black: {
+    backgroundColor: blackColor,
+    boxShadow:
+        "0 12px 20px -10px rgba(" +
+        hexToRgb(whiteColor) +
+        ",.28), 0 4px 20px 0 rgba(" +
+        hexToRgb(whiteColor) +
+        ",.12), 0 7px 8px -5px rgba(" +
+        hexToRgb(whiteColor) +
+        ",.2)",
+    "&:hover,&:focus": {
+      backgroundColor: blackColor,
+      boxShadow:
+          "0 12px 20px -10px rgba(" +
+          hexToRgb(whiteColor) +
+          ",.28), 0 4px 20px 0 rgba(" +
+          hexToRgb(whiteColor) +
+          ",.12), 0 7px 8px -5px rgba(" +
+          hexToRgb(whiteColor) +
+          ",.2)"
+    }
+  },
   green: {
     backgroundColor: successColor[0],
     boxShadow:
