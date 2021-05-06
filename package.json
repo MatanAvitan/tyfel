@@ -20,8 +20,7 @@
     "react-google-maps": "9.4.5",
     "react-router-dom": "5.2.0",
     "react-scripts": "3.4.1",
-    "react-swipeable-views": "0.13.9",
-    "react-wordcloud": "^1.2.7"
+    "react-swipeable-views": "0.13.9"
   },
   "scripts": {
     "start": "react-scripts start",
