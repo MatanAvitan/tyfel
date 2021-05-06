@@ -42,7 +42,8 @@ class Feed extends React.Component {
                 {this.state.posts.map(item => <RecipeReviewCard username={item.username}
                                                                 creation_date={item.creation_date}
                                                                 title={item.title}
-                                                                body={item.body}/>)}
+                                                                body={item.body}
+                                                                comments={item.comments}/>)}
             </div>
         )
     }
