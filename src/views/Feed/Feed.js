@@ -8,7 +8,6 @@ import {makeStyles} from "@material-ui/core/styles";
 import styles from "assets/jss/material-dashboard-react/views/dashboardStyle.js";
 import RecipeReviewCard from "../../components/Post/Post";
 
-
 class Feed extends React.Component {
 
 
@@ -43,6 +42,7 @@ class Feed extends React.Component {
                                                                 creation_date={item.creation_date}
                                                                 title={item.title}
                                                                 body={item.body}
+                                                                image_path={item.image_path}
                                                                 comments={item.comments}/>)}
             </div>
         )

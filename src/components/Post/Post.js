@@ -66,11 +66,11 @@ export default function RecipeReviewCard(props) {
             />
             <CardMedia
                 className={classes.media}
-                image="/static/images/cards/paella.jpg"
+                image={require('C:\\Git\\material-dashboard-react-master\\src\\assets\\posts_images\\image1.jpg')}
                 title="Paella dish"
             />
             <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">{props.body}</Typography>
+                <Typography variant="body1" color="textSecondary" component="p"><h8>{props.body}</h8></Typography>
             </CardContent>
             <CardActions disableSpacing>
                 <IconButton aria-label="add to favorites">
@@ -94,9 +94,9 @@ export default function RecipeReviewCard(props) {
 
                 {props.comments.map(comment =>
                     <CardContent>
-                        <Typography paragraph>{comment.username}</Typography>
-                        <Typography paragraph>{comment.creation_date}</Typography>
-                        <Typography paragraph>{comment.comment}</Typography>
+                        <Typography paragraph variant="body2">{comment.username}</Typography>
+                        <Typography paragraph variant="body2">{comment.creation_date}</Typography>
+                        <Typography paragraph variant="body2"><b>{comment.comment}</b></Typography>
                     </CardContent>
                 )}
 
