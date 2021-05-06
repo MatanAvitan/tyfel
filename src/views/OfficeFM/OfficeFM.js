@@ -22,7 +22,7 @@ export default function OfficeFM() {
     return (
         <div>
             <SpotifyPlayer
-                uri="spotify:album:1TIUsv8qmYLpBEhvmBmyBk"
+                uri="spotify:playlist:5RrUx8Wgoaokc2TDkG7z2T"
                 size={size}
                 view={view}
                 theme={theme}

@@ -66,7 +66,6 @@ export default function RecipeReviewCard(props) {
             />
             <CardMedia
                 className={classes.media}
-                image={require('C:\\Git\\material-dashboard-react-master\\src\\assets\\posts_images\\image1.jpg')}
                 title="Paella dish"
             />
             <CardContent>

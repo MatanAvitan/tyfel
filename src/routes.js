@@ -54,6 +54,14 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
+    path: "/statistics",
+    name: "Statistics",
+    rtlName: "الرموز",
+    icon: LibraryMusicIcon,
+    component: OfficeFM,
+    layout: "/admin"
+  },
+  {
     path: "/user",
     name: "User Profile",
     rtlName: "ملف تعريفي للمستخدم",
