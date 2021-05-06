@@ -15,7 +15,7 @@ export default function SmallTalk() {
     const classes = useStyles();
     return (
         <div>
-            <RecipeReviewCard/>
+            {/*<RecipeReviewCard/>*/}
         </div>
     );
 }
