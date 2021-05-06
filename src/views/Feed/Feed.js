@@ -8,13 +8,39 @@ import {makeStyles} from "@material-ui/core/styles";
 import styles from "assets/jss/material-dashboard-react/views/dashboardStyle.js";
 import RecipeReviewCard from "../../components/Post/Post";
 
-const useStyles = makeStyles(styles);
 
-export default function Feed() {
-  const classes = useStyles();
-  return (
-    <div>
-      <RecipeReviewCard/>
-    </div>
-  );
+class Feed extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            posts: []
+        }
+    }
+
+    fetchData = async () => {
+        const a = await fetch('http://192.168.197.23:80/posts'
+            , {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            }
+        );
+        return a.json();
+    }
+
+    async componentDidMount() {
+        const posts = await this.fetchData();
+        this.setState({posts});
+    }
+
+    render() {
+        return (
+            <div>
+                {this.state.posts.map(item => <RecipeReviewCard/>)}
+            </div>
+        )
+    }
 }
+
+export default Feed
