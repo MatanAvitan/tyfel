@@ -26,6 +26,12 @@ import OfficeFM from "views/OfficeFM/OfficeFM.js";
 import SmallTalk from "./views/SmallTalk/SmallTalk";
 import EmojiFoodBeverageIcon from '@material-ui/icons/EmojiFoodBeverage';
 import LibraryMusicIcon from '@material-ui/icons/LibraryMusic';
+import Statistics from "./views/Statistics/Statistics";
+import EqualizerIcon from '@material-ui/icons/Equalizer';
+import TaquillaTed from "./views/TaquillaTed/TaquillaTed";
+import LocalBarIcon from '@material-ui/icons/LocalBar';
+import GamersHub from "./views/GamersHub/GamersHub";
+import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
 
 
 const dashboardRoutes = [
@@ -57,8 +63,24 @@ const dashboardRoutes = [
     path: "/statistics",
     name: "Statistics",
     rtlName: "الرموز",
-    icon: LibraryMusicIcon,
-    component: OfficeFM,
+    icon: EqualizerIcon,
+    component: Statistics,
+    layout: "/admin"
+  },
+  {
+    path: "/taquilla_ted_talks",
+    name: "Taquilla Ted Talks",
+    rtlName: "الرموز",
+    icon: LocalBarIcon,
+    component: TaquillaTed,
+    layout: "/admin"
+  },
+  {
+    path: "/gamers_hub",
+    name: "Gamer's Hub",
+    rtlName: "الرموز",
+    icon: SportsEsportsIcon,
+    component: GamersHub,
     layout: "/admin"
   },
   {

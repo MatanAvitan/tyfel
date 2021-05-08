@@ -7,6 +7,7 @@ import {makeStyles} from "@material-ui/core/styles";
 
 import styles from "assets/jss/material-dashboard-react/views/dashboardStyle.js";
 import RecipeReviewCard from "../../components/Post/Post";
+import Grid from "@material-ui/core/Grid";
 
 class Feed extends React.Component {
 
@@ -19,7 +20,7 @@ class Feed extends React.Component {
     }
 
     fetchData = async () => {
-        const a = await fetch('http://192.168.197.23:80/posts'
+        const a = await fetch('http://localhost:80/posts'
             , {
                 headers: {
                     'Content-Type': 'application/json',
@@ -37,14 +38,14 @@ class Feed extends React.Component {
 
     render() {
         return (
-            <div>
+            <Grid container spacing={2}>
                 {this.state.posts.map(item => <RecipeReviewCard username={item.username}
                                                                 creation_date={item.creation_date}
                                                                 title={item.title}
                                                                 body={item.body}
                                                                 image_path={item.image_path}
                                                                 comments={item.comments}/>)}
-            </div>
+            </Grid>
         )
     }
 }

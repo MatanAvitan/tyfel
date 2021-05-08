@@ -18,7 +18,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        maxWidth: 345,
+        width: 345,
         margin: 30
     },
     media: {
@@ -66,7 +66,8 @@ export default function RecipeReviewCard(props) {
             />
             <CardMedia
                 className={classes.media}
-                title="Paella dish"
+                image={"http://localhost:8081/" + props.image_path}
+                title={props.username}
             />
             <CardContent>
                 <Typography variant="body1" color="textSecondary" component="p"><h8>{props.body}</h8></Typography>
@@ -92,10 +93,9 @@ export default function RecipeReviewCard(props) {
             <Collapse in={expanded} timeout="auto" unmountOnExit>
 
                 {props.comments.map(comment =>
-                    <CardContent>
-                        <Typography paragraph variant="body2">{comment.username}</Typography>
-                        <Typography paragraph variant="body2">{comment.creation_date}</Typography>
-                        <Typography paragraph variant="body2"><b>{comment.comment}</b></Typography>
+                    <CardContent color={'black'}>
+                        <Typography variant="body2">{comment.username} | {comment.creation_date}</Typography>
+                        <Typography variant="body2"><b>{comment.comment}</b></Typography>
                     </CardContent>
                 )}
 
